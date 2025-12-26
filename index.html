@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe de Resultados - Ventas Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            background: white;
+            padding: 60px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 3px solid #2980b9;
+            padding-bottom: 30px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .period {
+            color: #7f8c8d;
+            font-size: 1.2em;
+        }
+        
+        h2 {
+            color: #2980b9;
+            font-size: 1.8em;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .summary {
+            background: #ecf0f1;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .summary ul {
+            list-style: none;
+        }
+        
+        .summary li {
+            padding: 10px 0;
+            font-size: 1.1em;
+        }
+        
+        .summary strong {
+            color: #2c3e50;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: #2980b9;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        tr:hover {
+            background: #e8f4f8;
+        }
+        
+        .highlight-row {
+            background: #d5e8f7 !important;
+            font-weight: bold;
+        }
+        
+        .checkmark {
+            color: #27ae60;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .strengths ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .strengths li {
+            padding: 12px 0;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #ecf0f1;
+            color: #7f8c8d;
+        }
+        
+        .footer p {
+            margin: 8px 0;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>INFORME DE RESULTADOS - VENTAS WEB</h1>
+            <p class="period">Período: Diciembre 1-23, 2025</p>
+        </div>
+
+        <h2>RESUMEN EJECUTIVO</h2>
+        <div class="summary">
+            <ul>
+                <li><strong>Inversión en Pauta Digital:</strong> $11.844.567</li>
+                <li><strong>Ventas Nuevas Generadas:</strong> $3.566.300</li>
+                <li><strong>Planes Vendidos:</strong> 110</li>
+                <li><strong>Recurrencias:</strong> 191 renovaciones ($16.517.900)</li>
+                <li><strong>ROI Total:</strong> +69.6% (Ganancia de $8.239.633)</li>
+                <li><strong>Impresiones Totales:</strong> 1.191.195</li>
+                <li><strong>Alcance Total:</strong> 752.979 personas</li>
+            </ul>
+        </div>
+
+        <h2>ANÁLISIS DE VENTAS POR PLAN</h2>
+        <p><strong>Análisis de Ventas:</strong></p>
+        <ul style="margin: 20px 0; padding-left: 20px;">
+            <li><strong>Plan más vendido:</strong> $49.900 con 56 unidades (50.9% de las ventas)</li>
+            <li><strong>Mayor ingreso:</strong> $49.900 generó $2.794.400 (78.4% del total)</li>
+            <li><strong>Plan premium ($89.000):</strong> 3 unidades = $267.000 (7.5% del total)</li>
+            <li><strong>Plan medio ($49.900):</strong> 56 unidades = $2.794.400 (78.4% del total)</li>
+            <li><strong>Plan entrada ($9.900):</strong> 51 unidades = $504.900 (14.2% del total)</li>
+        </ul>
+
+        <h2>RESULTADOS FINANCIEROS</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Concepto</th>
+                    <th>Cantidad</th>
+                    <th>Ingresos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ventas Nuevas</td>
+                    <td>110</td>
+                    <td>$3.566.300</td>
+                </tr>
+                <tr>
+                    <td>Recurrencias</td>
+                    <td>191</td>
+                    <td>$16.517.900</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>TOTAL INGRESOS</strong></td>
+                    <td><strong>301</strong></td>
+                    <td><strong>$20.084.200</strong></td>
+                </tr>
+                <tr>
+                    <td>Inversión Pauta</td>
+                    <td>-</td>
+                    <td>$11.844.567</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>GANANCIA NETA</strong></td>
+                    <td>-</td>
+                    <td><strong>$8.239.633</strong></td>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>ROI</strong></td>
+                    <td>-</td>
+                    <td><strong>+69.6%</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>INVERSIÓN EN PAUTA DIGITAL</h2>
+        <p><strong>Métricas Clave:</strong></p>
+        <ul style="margin: 20px 0; padding-left: 20px;">
+            <li>CPM (Costo por mil impresiones): $9.945</li>
+            <li>Costo por Alcance: $15.733</li>
+            <li>Frecuencia Promedio: 1.58 veces</li>
+        </ul>
+
+        <p><strong>Campañas Principales:</strong></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Campaña</th>
+                    <th>Inversión</th>
+                    <th>Impresiones</th>
+                    <th>Alcance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sitio_WEB</td>
+                    <td>$5.271.040</td>
+                    <td>819.195</td>
+                    <td>152.979</td>
+                </tr>
+                <tr>
+                    <td>CONJUNTO 1 OPEN VENTAS</td>
+                    <td>$2.014.071</td>
+                    <td>320.755</td>
+                    <td>87.737</td>
+                </tr>
+                <tr>
+                    <td>ADV+ 18-37</td>
+                    <td>$1.714.227</td>
+                    <td>328.244</td>
+                    <td>139.039</td>
+                </tr>
+                <tr>
+                    <td>EASY ADTOCART</td>
+                    <td>$1.512.184</td>
+                    <td>136.197</td>
+                    <td>92.818</td>
+                </tr>
+                <tr>
+                    <td>CONJUNTO 5.1 ADV+</td>
+                    <td>$432.239</td>
+                    <td>39.775</td>
+                    <td>14.330</td>
+                </tr>
+                <tr>
+                    <td>EASY REMARKETING</td>
+                    <td>$398.449</td>
+                    <td>52.924</td>
+                    <td>24.074</td>
+                </tr>
+                <tr>
+                    <td>Redes_Ventas</td>
+                    <td>$233.367</td>
+                    <td>45.352</td>
+                    <td>20.762</td>
+                </tr>
+                <tr>
+                    <td>Intereses_18-47</td>
+                    <td>$171.196</td>
+                    <td>33.096</td>
+                    <td>22.842</td>
+                </tr>
+                <tr>
+                    <td>EASY COMPRA</td>
+                    <td>$97.794</td>
+                    <td>17.257</td>
+                    <td>15.149</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>ANÁLISIS Y CONCLUSIONES</h2>
+        <div class="strengths">
+            <p><strong>Fortalezas:</strong></p>
+            <ul>
+                <li><span class="checkmark">✓</span><strong>ROI excepcional del 69.6%</strong> - Excelente rentabilidad sobre inversión</li>
+                <li><span class="checkmark">✓</span><strong>Recurrencias sólidas:</strong> 191 renovaciones generan $16.5M (82.2% de ingresos totales)</li>
+                <li><span class="checkmark">✓</span><strong>Plan $49.900 lidera</strong> con 56 ventas (50.9% del total)</li>
+                <li><span class="checkmark">✓</span><strong>Base de clientes recurrentes muy fuerte</strong> - Motor principal del negocio</li>
+                <li><span class="checkmark">✓</span><strong>Alcance efectivo:</strong> 752.979 personas con 1.19M impresiones</li>
+                <li><span class="checkmark">✓</span><strong>CPM competitivo</strong> de $9.945</li>
+                <li><span class="checkmark">✓</span><strong>Frecuencia óptima</strong> de 1.58 veces</li>
+                <li><span class="checkmark">✓</span><strong>Campañas top:</strong> Sitio_WEB (44.5%), CONJUNTO 1 (17%), ADV+ 18-37 (14.5%)</li>
+            </ul>
+        </div>
+
+        <h2>INDICADORES CLAVE (KPIs)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Métrica</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Inversión en Pauta Digital</td>
+                    <td>$11.844.567</td>
+                </tr>
+                <tr>
+                    <td>Ingresos Totales</td>
+                    <td>$20.084.200</td>
+                </tr>
+                <tr>
+                    <td>Ventas Nuevas</td>
+                    <td>$3.566.300</td>
+                </tr>
+                <tr>
+                    <td>Recurrencias</td>
+                    <td>$16.517.900</td>
+                </tr>
+                <tr>
+                    <td>Planes Vendidos</td>
+                    <td>110</td>
+                </tr>
+                <tr>
+                    <td>Renovaciones</td>
+                    <td>191</td>
+                </tr>
+                <tr>
+                    <td>ROI Total</td>
+                    <td>+69.6%</td>
+                </tr>
+                <tr>
+                    <td>Ganancia Neta</td>
+                    <td>$8.239.633</td>
+                </tr>
+                <tr>
+                    <td>Impresiones Totales</td>
+                    <td>1.191.195</td>
+                </tr>
+                <tr>
+                    <td>Alcance Total</td>
+                    <td>752.979</td>
+                </tr>
+                <tr>
+                    <td>CPM Promedio</td>
+                    <td>$9.945</td>
+                </tr>
+                <tr>
+                    <td>Frecuencia</td>
+                    <td>1.58</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="footer">
+            <p><strong>Elaborado por:</strong> Área de Mercadeo</p>
+            <p><strong>Fecha:</strong> 24 de Diciembre de 2025</p>
+            <p><strong>Fitness People - Centro Médico Deportivo S.A.S</strong></p>
+        </div>
+    </div>
+</body>
+</html>
