@@ -133,6 +133,53 @@
             background: rgba(46, 204, 113, 0.3);
         }
         
+        .summary-box {
+            background: #ecf0f1;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        
+        .summary-box h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-label {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        
+        .stat-value.positive {
+            color: #27ae60;
+        }
+        
+        .stat-value.neutral {
+            color: #2980b9;
+        }
+        
+        .stat-note {
+            font-size: 0.85em;
+            color: #7f8c8d;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 padding: 30px 20px;
@@ -173,7 +220,7 @@
                     ✓ Optimización: -18.2% en inversión vs noviembre
                 </div>
                 
-                <a href="diciembre-2025/" class="view-button">Ver Informe Completo →</a>
+                <a href="./diciembre-2025/index.html" class="view-button">Ver Informe Completo →</a>
             </div>
 
             <!-- Informe Noviembre 2025 -->
@@ -193,32 +240,32 @@
                     ✓ Crecimiento: +56.5% vs octubre
                 </div>
                 
-                <a href="noviembre-2025/" class="view-button">Ver Informe Completo →</a>
+                <a href="./noviembre-2025/index.html" class="view-button">Ver Informe Completo →</a>
             </div>
         </div>
 
-        <div style="background: #ecf0f1; padding: 30px; border-radius: 8px; margin-top: 40px;">
-            <h3 style="color: #2c3e50; margin-bottom: 15px;">📈 Resumen Comparativo</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                <div>
-                    <p style="color: #7f8c8d; font-size: 0.9em;">Crecimiento en Ventas</p>
-                    <p style="font-size: 1.5em; font-weight: bold; color: #27ae60;">+5.3%</p>
-                    <p style="font-size: 0.85em; color: #7f8c8d;">Dic vs Nov</p>
+        <div class="summary-box">
+            <h3>📈 Resumen Comparativo</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <p class="stat-label">Crecimiento en Ventas</p>
+                    <p class="stat-value positive">+5.3%</p>
+                    <p class="stat-note">Dic vs Nov</p>
                 </div>
-                <div>
-                    <p style="color: #7f8c8d; font-size: 0.9em;">Optimización Inversión</p>
-                    <p style="font-size: 1.5em; font-weight: bold; color: #27ae60;">-18.2%</p>
-                    <p style="font-size: 0.85em; color: #7f8c8d;">Reducción de costos</p>
+                <div class="stat-item">
+                    <p class="stat-label">Optimización Inversión</p>
+                    <p class="stat-value positive">-18.2%</p>
+                    <p class="stat-note">Reducción de costos</p>
                 </div>
-                <div>
-                    <p style="color: #7f8c8d; font-size: 0.9em;">Mejora en ROI</p>
-                    <p style="font-size: 1.5em; font-weight: bold; color: #27ae60;">+44.7pp</p>
-                    <p style="font-size: 0.85em; color: #7f8c8d;">De 3.9% a 48.6%</p>
+                <div class="stat-item">
+                    <p class="stat-label">Mejora en ROI</p>
+                    <p class="stat-value positive">+44.7pp</p>
+                    <p class="stat-note">De 3.9% a 48.6%</p>
                 </div>
-                <div>
-                    <p style="color: #7f8c8d; font-size: 0.9em;">Total Planes (2 meses)</p>
-                    <p style="font-size: 1.5em; font-weight: bold; color: #2980b9;">273</p>
-                    <p style="font-size: 0.85em; color: #7f8c8d;">Nov + Dic</p>
+                <div class="stat-item">
+                    <p class="stat-label">Total Planes (2 meses)</p>
+                    <p class="stat-value neutral">273</p>
+                    <p class="stat-note">Nov + Dic</p>
                 </div>
             </div>
         </div>
