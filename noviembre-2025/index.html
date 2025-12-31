@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe de Resultados - Ventas Web Noviembre 2025</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            background: white;
+            padding: 60px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 3px solid #2980b9;
+            padding-bottom: 30px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .period {
+            color: #7f8c8d;
+            font-size: 1.2em;
+        }
+        
+        h2 {
+            color: #2980b9;
+            font-size: 1.8em;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .summary {
+            background: #ecf0f1;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .summary ul {
+            list-style: none;
+        }
+        
+        .summary li {
+            padding: 10px 0;
+            font-size: 1.1em;
+        }
+        
+        .summary strong {
+            color: #2c3e50;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: #2980b9;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        tr:nth-child(even) {
+            background: #e8f4f8;
+        }
+        
+        tr:nth-child(odd) {
+            background: white;
+        }
+        
+        tr:hover {
+            background: #d0e8f7 !important;
+        }
+        
+        .highlight-row {
+            background: #d5e8f7 !important;
+            font-weight: bold;
+        }
+        
+        .checkmark {
+            color: #27ae60;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .strengths ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .strengths li {
+            padding: 12px 0;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        
+        .chart-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #ecf0f1;
+            color: #7f8c8d;
+        }
+        
+        .footer p {
+            margin: 8px 0;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            .back-link {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Volver al índice de informes</a>
+        
+        <div class="header">
+            <h1>INFORME DE RESULTADOS - VENTAS WEB</h1>
+            <p class="period">Período: Noviembre 2025</p>
+        </div>
+
+        <h2>RESUMEN EJECUTIVO</h2>
+        <div class="summary">
+            <ul>
+                <li><strong>Inversión en Pauta Digital:</strong> $23.141.378</li>
+                <li><strong>Planes Vendidos:</strong> 133</li>
+                <li><strong>Ingresos Generados:</strong> $24.033.400</li>
+                <li><strong>Página Web (Nuevos):</strong> $7.069.600</li>
+                <li><strong>Recurrencias:</strong> $16.963.800 (196 planes)</li>
+                <li><strong>ROI Total:</strong> +3.9% (Ganancia de $891.022)</li>
+            </ul>
+        </div>
+
+        <h2>DESGLOSE DE VENTAS POR TIPO DE PLAN</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Venta por Web</th>
+                    <th>Planes Totales</th>
+                    <th>Venta Total</th>
+                    <th>% del Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>$89.000</td>
+                    <td>29</td>
+                    <td>$2.581.000</td>
+                    <td>36.5%</td>
+                </tr>
+                <tr>
+                    <td>$99.000</td>
+                    <td>1</td>
+                    <td>$99.000</td>
+                    <td>1.4%</td>
+                </tr>
+                <tr>
+                    <td>$9.900</td>
+                    <td>30</td>
+                    <td>$297.000</td>
+                    <td>4.2%</td>
+                </tr>
+                <tr>
+                    <td>$49.900</td>
+                    <td>72</td>
+                    <td>$3.592.800</td>
+                    <td>50.8%</td>
+                </tr>
+                <tr>
+                    <td>$499.800</td>
+                    <td>1</td>
+                    <td>$499.800</td>
+                    <td>7.1%</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>TOTAL</strong></td>
+                    <td><strong>133</strong></td>
+                    <td><strong>$7.069.600</strong></td>
+                    <td><strong>100%</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="chart-container">
+            <canvas id="planesChart"></canvas>
+        </div>
+
+        <h2>DESGLOSE DE INGRESOS</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fuente</th>
+                    <th>Ingresos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Página Web (Nuevos)</td>
+                    <td>$7.069.600</td>
+                </tr>
+                <tr>
+                    <td>Recurrencias</td>
+                    <td>$16.963.800</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>TOTAL</strong></td>
+                    <td><strong>$24.033.400</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p style="margin: 20px 0;"><strong>Inversión Total:</strong> $23.141.378</p>
+        <p style="margin: 20px 0;"><strong>ROI Total:</strong> +3.9%</p>
+        <p style="margin: 20px 0;"><strong>Ganancia Neta:</strong> $891.022</p>
+
+        <h2>INVERSIÓN EN PAUTA DIGITAL</h2>
+        
+        <h3 style="color: #34495e; margin: 30px 0 15px 0;">Meta Ads (Facebook e Instagram)</h3>
+        <p><strong>Inversión:</strong> $18.543.150 (80.1% del presupuesto)</p>
+        <p><strong>Rendimiento:</strong></p>
+        <ul style="margin: 20px 0; padding-left: 20px;">
+            <li>Impresiones totales: 2.400.651</li>
+            <li>Alcance total: 526.091 personas</li>
+        </ul>
+
+        <p><strong>Desglose por campaña:</strong></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Campaña</th>
+                    <th>Inversión</th>
+                    <th>Impresiones</th>
+                    <th>Alcance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Campaña 1</td>
+                    <td>$7.685.410</td>
+                    <td>1.211.601</td>
+                    <td>224.570</td>
+                </tr>
+                <tr>
+                    <td>Campaña 2</td>
+                    <td>$81.673</td>
+                    <td>9.086</td>
+                    <td>6.768</td>
+                </tr>
+                <tr>
+                    <td>Campaña 3</td>
+                    <td>$6.111.476</td>
+                    <td>608.710</td>
+                    <td>130.569</td>
+                </tr>
+                <tr>
+                    <td>Campaña 4</td>
+                    <td>$2.377.753</td>
+                    <td>388.044</td>
+                    <td>118.746</td>
+                </tr>
+                <tr>
+                    <td>Campaña 5</td>
+                    <td>$2.286.838</td>
+                    <td>183.210</td>
+                    <td>45.438</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 style="color: #34495e; margin: 30px 0 15px 0;">Google Ads</h3>
+        <p><strong>Inversión:</strong> $4.598.228 (19.9% del presupuesto)</p>
+        <p><strong>Rendimiento:</strong></p>
+        <ul style="margin: 20px 0; padding-left: 20px;">
+            <li>Impresiones totales: 292.877</li>
+            <li>Clics totales: 6.219</li>
+            <li>CTR promedio: 2.12%</li>
+        </ul>
+
+        <p><strong>Desglose por campaña:</strong></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo de Campaña</th>
+                    <th>Estado</th>
+                    <th>Clics</th>
+                    <th>Impresiones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Búsqueda 1</td>
+                    <td>Habilitada</td>
+                    <td>3.172</td>
+                    <td>17.733</td>
+                </tr>
+                <tr>
+                    <td>Posicionamiento</td>
+                    <td>En pausa</td>
+                    <td>2.519</td>
+                    <td>272.046</td>
+                </tr>
+                <tr>
+                    <td>Búsqueda 2</td>
+                    <td>Habilitada</td>
+                    <td>528</td>
+                    <td>3.098</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>ANÁLISIS DE PRODUCTOS</h2>
+        
+        <p><strong>Producto Más Vendido:</strong></p>
+        <ul style="margin: 20px 0; padding-left: 20px;">
+            <li>Plan de $49.900: 72 unidades (54.1% de las ventas)</li>
+            <li>Genera $3.592.800 (50.8% de los ingresos nuevos)</li>
+        </ul>
+
+        <p><strong>Producto de Mayor Ingreso:</strong></p>
+        <ul style="margin: 20px 0; padding-left: 20px;">
+            <li>Plan de $89.000: 29 unidades (21.8% de las ventas)</li>
+            <li>Genera $2.581.000 (36.5% de los ingresos nuevos)</li>
+        </ul>
+
+        <p><strong>Producto de Entrada:</strong></p>
+        <ul style="margin: 20px 0; padding-left: 20px;">
+            <li>Plan de $9.900: 30 unidades vendidas</li>
+            <li>Representa el 4.2% de los ingresos</li>
+        </ul>
+
+        <h2>CRECIMIENTO MENSUAL DE VENTAS</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mes</th>
+                    <th>Planes Vendidos</th>
+                    <th>Crecimiento vs Mes Anterior</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Julio</td>
+                    <td>18</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Agosto</td>
+                    <td>66</td>
+                    <td>+266.7%</td>
+                </tr>
+                <tr>
+                    <td>Septiembre</td>
+                    <td>81</td>
+                    <td>+22.7%</td>
+                </tr>
+                <tr>
+                    <td>Octubre</td>
+                    <td>85</td>
+                    <td>+4.9%</td>
+                </tr>
+                <tr>
+                    <td>Noviembre</td>
+                    <td>133</td>
+                    <td>+56.5%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>Análisis de Tendencia:</strong></p>
+        <ul style="margin: 20px 0; padding-left: 20px;">
+            <li>Noviembre registra el mayor crecimiento del segundo semestre con +56.5%</li>
+            <li>Se vendieron 48 planes más que en octubre</li>
+            <li>Crecimiento acumulado desde julio: +638.9%</li>
+        </ul>
+
+        <h2>INDICADORES CLAVE (KPIs)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Métrica</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Inversión en Pauta Digital</td>
+                    <td>$23.141.378</td>
+                </tr>
+                <tr>
+                    <td>Ingresos Nuevos (Web)</td>
+                    <td>$7.069.600</td>
+                </tr>
+                <tr>
+                    <td>Ingresos Recurrentes</td>
+                    <td>$16.963.800</td>
+                </tr>
+                <tr>
+                    <td>Ingresos Totales</td>
+                    <td>$24.033.400</td>
+                </tr>
+                <tr>
+                    <td>Planes Nuevos Vendidos</td>
+                    <td>133</td>
+                </tr>
+                <tr>
+                    <td>Planes Recurrentes</td>
+                    <td>196</td>
+                </tr>
+                <tr>
+                    <td>Total Planes Activos</td>
+                    <td>329</td>
+                </tr>
+                <tr>
+                    <td>ROI Total</td>
+                    <td>+3.9%</td>
+                </tr>
+                <tr>
+                    <td>Ganancia Neta</td>
+                    <td>+$891.022</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>CONCLUSIONES</h2>
+        
+        <p><strong>Situación Actual:</strong></p>
+        <ul style="margin: 20px 0; padding-left: 20px;">
+            <li>La inversión de $23.141.378 generó $24.033.400 en ingresos totales</li>
+            <li>Ganancia neta de $891.022 (ROI +3.9%)</li>
+            <li>Las recurrencias ($16.963.800) representan el 70.6% de los ingresos totales</li>
+            <li>133 nuevos planes vendidos en el mes</li>
+        </ul>
+
+        <div class="strengths">
+            <p><strong>Fortalezas:</strong></p>
+            <ul>
+                <li><span class="checkmark">✓</span><strong>Crecimiento excepcional del 56.5%</strong> comparado con octubre</li>
+                <li><span class="checkmark">✓</span><strong>ROI positivo del 3.9%</strong></li>
+                <li><span class="checkmark">✓</span><strong>133 nuevos planes vendidos</strong> (récord del semestre)</li>
+                <li><span class="checkmark">✓</span><strong>Base sólida de 196 clientes recurrentes</strong> generando $16.9M</li>
+                <li><span class="checkmark">✓</span><strong>Plan de $49.900 lidera en volumen</strong> con 72 unidades (54.1%)</li>
+                <li><span class="checkmark">✓</span><strong>Meta Ads generó 2.4M de impresiones</strong> con alcance de 526K personas</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p><strong>Elaborado por:</strong> Área de Mercadeo</p>
+            <p><strong>Fecha:</strong> 2 de Diciembre de 2025</p>
+            <p><strong>Fitness People - Centro Médico Deportivo S.A.S</strong></p>
+        </div>
+    </div>
+
+    <script>
+        // Gráfico de Planes Vendidos
+        const ctx = document.getElementById('planesChart').getContext('2d');
+        const planesChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Plan $499.800', 'Plan $89.000', 'Plan $99.000', 'Plan $49.900', 'Plan $9.900'],
+                datasets: [{
+                    label: 'Cantidad de Planes Vendidos',
+                    data: [1, 29, 1, 72, 30],
+                    backgroundColor: [
+                        '#1a5276',
+                        '#2471a3',
+                        '#2980b9',
+                        '#3498db',
+                        '#5dade2'
+                    ],
+                    borderColor: [
+                        '#154360',
+                        '#1b4f72',
+                        '#1f6391',
+                        '#2874a6',
+                        '#2e86c1'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Distribución de Ventas por Plan - Noviembre 2025',
+                        font: {
+                            size: 16,
+                            weight: 'bold'
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 10
+                        },
+                        title: {
+                            display: true,
+                            text: 'Cantidad de Planes'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Tipo de Plan'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
