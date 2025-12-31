@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informe de Resultados - Ventas Web</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Informes de Ventas Web - Fitness People</title>
     <style>
         * {
             margin: 0;
@@ -19,141 +18,94 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
-            background: #f5f5f5;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
         }
         
         .container {
             background: white;
             padding: 60px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            border-radius: 10px;
         }
         
         .header {
             text-align: center;
             margin-bottom: 50px;
-            border-bottom: 3px solid #2980b9;
             padding-bottom: 30px;
+            border-bottom: 3px solid #2980b9;
         }
         
         h1 {
             color: #2c3e50;
-            font-size: 2.5em;
+            font-size: 2.8em;
             margin-bottom: 15px;
         }
         
-        .period {
+        .subtitle {
             color: #7f8c8d;
-            font-size: 1.2em;
+            font-size: 1.3em;
+            margin-top: 10px;
         }
         
-        h2 {
-            color: #2980b9;
-            font-size: 1.8em;
-            margin: 40px 0 20px 0;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #ecf0f1;
+        .reports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
         }
         
-        .summary {
-            background: #ecf0f1;
+        .report-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 30px;
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-        
-        .summary ul {
-            list-style: none;
-        }
-        
-        .summary li {
-            padding: 10px 0;
-            font-size: 1.1em;
-        }
-        
-        .summary strong {
-            color: #2c3e50;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 30px 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        th {
-            background: #2980b9;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             color: white;
-            padding: 15px;
-            text-align: left;
-            font-weight: 600;
         }
         
-        td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #ecf0f1;
+        .report-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
         
-        tr:nth-child(even) {
-            background: #e8f4f8;
+        .report-card h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: white;
         }
         
-        tr:nth-child(odd) {
-            background: white;
-        }
-        
-        tr:hover {
-            background: #d0e8f7 !important;
-        }
-        
-        .highlight-row {
-            background: #d5e8f7 !important;
-            font-weight: bold;
-        }
-        
-        .positive-change {
-            color: #27ae60;
-            font-weight: bold;
-        }
-        
-        .checkmark {
-            color: #27ae60;
-            margin-right: 10px;
-            font-size: 1.2em;
-        }
-        
-        .strengths ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .strengths li {
-            padding: 12px 0;
-            font-size: 1.05em;
-            line-height: 1.8;
-        }
-        
-        .chart-container {
-            width: 100%;
-            max-width: 600px;
-            margin: 30px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        .comparison-box {
-            background: #e8f8f5;
-            border-left: 4px solid #27ae60;
-            padding: 20px;
+        .report-stats {
             margin: 20px 0;
-            border-radius: 4px;
+            padding: 15px 0;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            border-bottom: 1px solid rgba(255,255,255,0.3);
         }
         
-        .comparison-box p {
+        .report-stats p {
             margin: 8px 0;
             font-size: 1.05em;
+        }
+        
+        .report-stats strong {
+            color: #fff;
+        }
+        
+        .view-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .view-button:hover {
+            background: #f8f9fa;
+            transform: scale(1.05);
         }
         
         .footer {
@@ -168,13 +120,30 @@
             margin: 8px 0;
         }
         
-        @media print {
-            body {
-                background: white;
-            }
+        .comparison-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        
+        .positive {
+            background: rgba(46, 204, 113, 0.3);
+        }
+        
+        @media (max-width: 768px) {
             .container {
-                box-shadow: none;
-                padding: 20px;
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .reports-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -182,345 +151,83 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>INFORME DE RESULTADOS - VENTAS WEB</h1>
-            <p class="period">Período: Diciembre 1-31, 2025</p>
+            <h1>📊 Informes de Ventas Web</h1>
+            <p class="subtitle">Fitness People - Centro Médico Deportivo S.A.S</p>
         </div>
 
-        <h2>RESUMEN EJECUTIVO</h2>
-        <div class="summary">
-            <ul>
-                <li><strong>Inversión en Pauta Digital:</strong> $18.926.569</li>
-                <li><strong>Ventas Nuevas Generadas:</strong> $5.889.700</li>
-                <li><strong>Planes Vendidos:</strong> 140</li>
-                <li><strong>Recurrencias:</strong> 268 renovaciones ($22.230.100)</li>
-                <li><strong>ROI Total:</strong> +48.6% (Ganancia de $9.193.231)</li>
-                <li><strong>Impresiones Totales:</strong> 1.534.559</li>
-                <li><strong>Alcance Total:</strong> 217.427 personas</li>
-            </ul>
+        <div class="reports-grid">
+            <!-- Informe Diciembre 2025 -->
+            <div class="report-card">
+                <h2>Diciembre 2025</h2>
+                <p style="opacity: 0.9;">Período: 1-31 de Diciembre</p>
+                
+                <div class="report-stats">
+                    <p><strong>Planes Vendidos:</strong> 140</p>
+                    <p><strong>Inversión:</strong> $18.926.569</p>
+                    <p><strong>Ingresos Totales:</strong> $28.119.800</p>
+                    <p><strong>ROI:</strong> +48.6%</p>
+                    <p><strong>Ganancia Neta:</strong> $9.193.231</p>
+                </div>
+                
+                <div class="comparison-badge positive">
+                    ✓ Optimización: -18.2% en inversión vs noviembre
+                </div>
+                
+                <a href="diciembre-2025/" class="view-button">Ver Informe Completo →</a>
+            </div>
+
+            <!-- Informe Noviembre 2025 -->
+            <div class="report-card">
+                <h2>Noviembre 2025</h2>
+                <p style="opacity: 0.9;">Período: Noviembre 2025</p>
+                
+                <div class="report-stats">
+                    <p><strong>Planes Vendidos:</strong> 133</p>
+                    <p><strong>Inversión:</strong> $23.141.378</p>
+                    <p><strong>Ingresos Totales:</strong> $24.033.400</p>
+                    <p><strong>ROI:</strong> +3.9%</p>
+                    <p><strong>Ganancia Neta:</strong> $891.022</p>
+                </div>
+                
+                <div class="comparison-badge positive">
+                    ✓ Crecimiento: +56.5% vs octubre
+                </div>
+                
+                <a href="noviembre-2025/" class="view-button">Ver Informe Completo →</a>
+            </div>
         </div>
 
-        <div class="comparison-box">
-            <p><strong>📊 Comparación con Mes Anterior (Noviembre):</strong></p>
-            <p><strong>Inversión Noviembre:</strong> $23.141.378</p>
-            <p><strong>Inversión Diciembre:</strong> $18.926.569</p>
-            <p><strong class="positive-change">Reducción de Inversión: $4.214.809 (-18.2%)</strong></p>
-            <p>Se logró optimizar la inversión en pauta digital manteniendo un ROI positivo del 48.6%</p>
+        <div style="background: #ecf0f1; padding: 30px; border-radius: 8px; margin-top: 40px;">
+            <h3 style="color: #2c3e50; margin-bottom: 15px;">📈 Resumen Comparativo</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <div>
+                    <p style="color: #7f8c8d; font-size: 0.9em;">Crecimiento en Ventas</p>
+                    <p style="font-size: 1.5em; font-weight: bold; color: #27ae60;">+5.3%</p>
+                    <p style="font-size: 0.85em; color: #7f8c8d;">Dic vs Nov</p>
+                </div>
+                <div>
+                    <p style="color: #7f8c8d; font-size: 0.9em;">Optimización Inversión</p>
+                    <p style="font-size: 1.5em; font-weight: bold; color: #27ae60;">-18.2%</p>
+                    <p style="font-size: 0.85em; color: #7f8c8d;">Reducción de costos</p>
+                </div>
+                <div>
+                    <p style="color: #7f8c8d; font-size: 0.9em;">Mejora en ROI</p>
+                    <p style="font-size: 1.5em; font-weight: bold; color: #27ae60;">+44.7pp</p>
+                    <p style="font-size: 0.85em; color: #7f8c8d;">De 3.9% a 48.6%</p>
+                </div>
+                <div>
+                    <p style="color: #7f8c8d; font-size: 0.9em;">Total Planes (2 meses)</p>
+                    <p style="font-size: 1.5em; font-weight: bold; color: #2980b9;">273</p>
+                    <p style="font-size: 0.85em; color: #7f8c8d;">Nov + Dic</p>
+                </div>
+            </div>
         </div>
-
-        <h2>ANÁLISIS DE VENTAS POR PLAN</h2>
-        <p><strong>Análisis de Ventas:</strong></p>
-        <ul style="margin: 20px 0; padding-left: 20px;">
-            <li><strong>Plan más vendido:</strong> $9.900 con 67 unidades (47.9% de las ventas)</li>
-            <li><strong>Mayor ingreso:</strong> $49.900 generó $3.243.500 (55.1% del total)</li>
-        </ul>
-
-        <div class="chart-container">
-            <canvas id="planesChart"></canvas>
-        </div>
-
-        <h2>CRECIMIENTO DE VENTAS MENSUAL</h2>
-        <p><strong>Evolución de Planes Vendidos:</strong></p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Mes</th>
-                    <th>Cantidad de Planes</th>
-                    <th>Crecimiento vs Mes Anterior</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Julio</td>
-                    <td>18</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>Agosto</td>
-                    <td>66</td>
-                    <td>+266.7%</td>
-                </tr>
-                <tr>
-                    <td>Septiembre</td>
-                    <td>81</td>
-                    <td>+22.7%</td>
-                </tr>
-                <tr>
-                    <td>Octubre</td>
-                    <td>85</td>
-                    <td>+4.9%</td>
-                </tr>
-                <tr>
-                    <td>Noviembre</td>
-                    <td>133</td>
-                    <td>+56.5%</td>
-                </tr>
-                <tr>
-                    <td>Diciembre</td>
-                    <td>140</td>
-                    <td>+5.3%</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2>RESULTADOS FINANCIEROS</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Concepto</th>
-                    <th>Cantidad</th>
-                    <th>Ingresos</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Ventas Nuevas</td>
-                    <td>140</td>
-                    <td>$5.889.700</td>
-                </tr>
-                <tr>
-                    <td>Recurrencias</td>
-                    <td>268</td>
-                    <td>$22.230.100</td>
-                </tr>
-                <tr class="highlight-row">
-                    <td><strong>TOTAL INGRESOS</strong></td>
-                    <td><strong>408</strong></td>
-                    <td><strong>$28.119.800</strong></td>
-                </tr>
-                <tr>
-                    <td>Inversión Pauta</td>
-                    <td>-</td>
-                    <td>$18.926.569</td>
-                </tr>
-                <tr class="highlight-row">
-                    <td><strong>GANANCIA NETA</strong></td>
-                    <td>-</td>
-                    <td><strong>$9.193.231</strong></td>
-                </tr>
-                <tr class="highlight-row">
-                    <td><strong>ROI</strong></td>
-                    <td>-</td>
-                    <td><strong>+48.6%</strong></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2>INVERSIÓN EN PAUTA DIGITAL</h2>
-        <p><strong>Métricas Clave:</strong></p>
-        <ul style="margin: 20px 0; padding-left: 20px;">
-            <li>CPM (Costo por mil impresiones): $12.333</li>
-            <li>Costo por Alcance: $87.046</li>
-            <li>Frecuencia Promedio: 7.06 veces</li>
-        </ul>
-
-        <p><strong>Campañas Principales:</strong></p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Campaña</th>
-                    <th>Impresiones</th>
-                    <th>Alcance</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Sitio_WEB</td>
-                    <td>1.534.559</td>
-                    <td>217.427</td>
-                </tr>
-                <tr>
-                    <td>Redes_Ventas</td>
-                    <td>45.352</td>
-                    <td>20.762</td>
-                </tr>
-                <tr>
-                    <td>ADV+ 18-37</td>
-                    <td>328.246</td>
-                    <td>139.040</td>
-                </tr>
-                <tr>
-                    <td>Intereses_18-47</td>
-                    <td>33.096</td>
-                    <td>22.842</td>
-                </tr>
-                <tr>
-                    <td>EASY ABIERTO 18-50 COMPRA</td>
-                    <td>17.257</td>
-                    <td>15.149</td>
-                </tr>
-                <tr>
-                    <td>EASY ABIERTO 18-50 ADTOCART_LANDINGFINAL</td>
-                    <td>136.439</td>
-                    <td>32.910</td>
-                </tr>
-                <tr>
-                    <td>EASY REMARKETING VISITANTES WEB 18-50 ADTOCART_LANDINGORIGINAL</td>
-                    <td>55.021</td>
-                    <td>25.263</td>
-                </tr>
-                <tr>
-                    <td>CONJUNTO 5.1 ADV+ - Copia</td>
-                    <td>39.775</td>
-                    <td>14.330</td>
-                </tr>
-                <tr>
-                    <td>CONJUNTO 1 OPEN VENTAS - Copia</td>
-                    <td>320.755</td>
-                    <td>87.737</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2>ANÁLISIS Y CONCLUSIONES</h2>
-        <div class="strengths">
-            <p><strong>Fortalezas:</strong></p>
-            <ul>
-                <li><span class="checkmark">✓</span><strong>ROI positivo del 48.6%</strong> - Excelente rentabilidad sobre inversión</li>
-                <li><span class="checkmark">✓</span><strong>Optimización de inversión:</strong> Reducción de $4.2M (-18.2%) vs noviembre manteniendo resultados</li>
-                <li><span class="checkmark">✓</span><strong>Crecimiento exponencial:</strong> +677.8% desde julio (18 a 140 planes)</li>
-                <li><span class="checkmark">✓</span><strong>Recurrencias sólidas:</strong> 268 renovaciones generan $22.2M (79.0% de ingresos totales)</li>
-                <li><span class="checkmark">✓</span><strong>Diversificación de planes:</strong> Ventas en 5 niveles de precio diferentes</li>
-                <li><span class="checkmark">✓</span><strong>Plan $49.900 lidera en ingresos</strong> con 65 ventas (46.4% del total) generando $3.2M</li>
-                <li><span class="checkmark">✓</span><strong>Planes premium exitosos:</strong> $1.5M en ventas de planes $89K+ (26.3% del total)</li>
-                <li><span class="checkmark">✓</span><strong>Base de clientes recurrentes muy fuerte</strong> - Motor principal del negocio</li>
-                <li><span class="checkmark">✓</span><strong>Alcance efectivo:</strong> 217.427 personas con 1.53M impresiones</li>
-                <li><span class="checkmark">✓</span><strong>Alta frecuencia</strong> de 7.06 veces - Mayor exposición de marca</li>
-                <li><span class="checkmark">✓</span><strong>Tendencia positiva:</strong> Crecimiento sostenido mes a mes</li>
-                <li><span class="checkmark">✓</span><strong>Campaña dominante:</strong> Sitio_WEB con 1.53M impresiones</li>
-            </ul>
-        </div>
-
-        <h2>INDICADORES CLAVE (KPIs)</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Métrica</th>
-                    <th>Valor</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Inversión en Pauta Digital</td>
-                    <td>$18.926.569</td>
-                </tr>
-                <tr>
-                    <td>Ingresos Totales</td>
-                    <td>$28.119.800</td>
-                </tr>
-                <tr>
-                    <td>Ventas Nuevas</td>
-                    <td>$5.889.700</td>
-                </tr>
-                <tr>
-                    <td>Recurrencias</td>
-                    <td>$22.230.100</td>
-                </tr>
-                <tr>
-                    <td>Planes Vendidos</td>
-                    <td>140</td>
-                </tr>
-                <tr>
-                    <td>Renovaciones</td>
-                    <td>268</td>
-                </tr>
-                <tr>
-                    <td>ROI Total</td>
-                    <td>+48.6%</td>
-                </tr>
-                <tr>
-                    <td>Ganancia Neta</td>
-                    <td>$9.193.231</td>
-                </tr>
-                <tr>
-                    <td>Impresiones Totales</td>
-                    <td>1.534.559</td>
-                </tr>
-                <tr>
-                    <td>Alcance Total</td>
-                    <td>217.427</td>
-                </tr>
-                <tr>
-                    <td>CPM Promedio</td>
-                    <td>$12.333</td>
-                </tr>
-                <tr>
-                    <td>Frecuencia</td>
-                    <td>7.06</td>
-                </tr>
-            </tbody>
-        </table>
 
         <div class="footer">
             <p><strong>Elaborado por:</strong> Área de Mercadeo</p>
-            <p><strong>Fecha:</strong> 31 de Diciembre de 2025</p>
             <p><strong>Fitness People - Centro Médico Deportivo S.A.S</strong></p>
+            <p style="margin-top: 20px; font-size: 0.9em;">Última actualización: 31 de Diciembre de 2025</p>
         </div>
     </div>
-
-    <script>
-        // Gráfico de Planes Vendidos
-        const ctx = document.getElementById('planesChart').getContext('2d');
-        const planesChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Plan Ultra Premium\n$499.800', 'Plan Premium\n$349.000', 'Plan Alto\n$89.000', 'Plan Medio\n$49.900', 'Plan Entrada\n$9.900'],
-                datasets: [{
-                    label: 'Cantidad de Planes Vendidos',
-                    data: [1, 3, 4, 65, 67],
-                    backgroundColor: [
-                        '#1a5276',
-                        '#2471a3',
-                        '#2980b9',
-                        '#3498db',
-                        '#5dade2'
-                    ],
-                    borderColor: [
-                        '#154360',
-                        '#1b4f72',
-                        '#1f6391',
-                        '#2874a6',
-                        '#2e86c1'
-                    ],
-                    borderWidth: 2
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                plugins: {
-                    legend: {
-                        display: true,
-                        position: 'top',
-                    },
-                    title: {
-                        display: true,
-                        text: 'Distribución de Ventas por Plan',
-                        font: {
-                            size: 16,
-                            weight: 'bold'
-                        }
-                    }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            stepSize: 10
-                        },
-                        title: {
-                            display: true,
-                            text: 'Cantidad de Planes'
-                        }
-                    },
-                    x: {
-                        title: {
-                            display: true,
-                            text: 'Tipo de Plan'
-                        }
-                    }
-                }
-            }
-        });
-    </script>
 </body>
 </html>
