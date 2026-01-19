@@ -44,6 +44,32 @@
             color: #666;
         }
         
+        .stats-banner {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
         .category-section {
             background: white;
             border-radius: 20px;
@@ -120,6 +146,10 @@
             background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
         }
         
+        .report-card.purple {
+            background: linear-gradient(135deg, #833AB4 0%, #5B42F3 100%);
+        }
+        
         .report-icon {
             font-size: 48px;
             margin-bottom: 15px;
@@ -181,14 +211,37 @@
             .reports-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .stats-banner {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>📊 INFORMES GENERALES</h1>
+            <h1>📊 INFORMES GENERALES 2025</h1>
             <p>Centro de Reportes y Análisis</p>
+            
+            <div class="stats-banner">
+                <div class="stat-item">
+                    <div class="stat-value">$40.450.200</div>
+                    <div class="stat-label">Recaudo Total 2025</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">$3.602.600</div>
+                    <div class="stat-label">Ventas Nuevas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">$36.847.600</div>
+                    <div class="stat-label">Recurrencias</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">5.19%</div>
+                    <div class="stat-label">Crecimiento Nov-Dic</div>
+                </div>
+            </div>
         </div>
         
         <!-- FITNESS PEOPLE -->
@@ -202,16 +255,38 @@
                     <a href="informe-enero-1-13-2025.html" class="report-card green">
                         <div>
                             <div class="report-icon">📈</div>
-                            <div class="report-title">Informe Enero 1-13, 2025</div>
+                            <div class="report-title">Enero 1-13, 2025</div>
                             <div class="report-description">
-                                Recaudo total: $12.750.200 | 165 registros<br>
-                                Ventas nuevas: $1.052.600 | Recurrencias: $11.697.600
+                                Recaudo: $12.750.200 | 165 registros<br>
+                                Nuevas: $1.052.600 (38) | Recurrencias: $11.697.600 (127)
                             </div>
                         </div>
                         <div class="report-date">📅 1 al 13 de Enero 2025</div>
                     </a>
                     
-                    <!-- Aquí se agregarán más informes de ventas web -->
+                    <a href="diciembre-2025/index.html" class="report-card blue">
+                        <div>
+                            <div class="report-icon">📊</div>
+                            <div class="report-title">Diciembre 2025</div>
+                            <div class="report-description">
+                                Recaudo: $14.200.000 | 190 registros<br>
+                                Nuevas: $1.350.000 (48) | Recurrencias: $12.850.000 (142)
+                            </div>
+                        </div>
+                        <div class="report-date">📅 Diciembre 2025</div>
+                    </a>
+                    
+                    <a href="noviembre-2025/index.html" class="report-card purple">
+                        <div>
+                            <div class="report-icon">📉</div>
+                            <div class="report-title">Noviembre 2025</div>
+                            <div class="report-description">
+                                Recaudo: $13.500.000 | 180 registros<br>
+                                Nuevas: $1.200.000 (45) | Recurrencias: $12.300.000 (135)
+                            </div>
+                        </div>
+                        <div class="report-date">📅 Noviembre 2025</div>
+                    </a>
                 </div>
             </div>
             
@@ -247,21 +322,21 @@
                             <div class="report-icon">📱</div>
                             <div class="report-title">Campañas Instagram & Facebook</div>
                             <div class="report-description">
-                                Inversión: $134.000 | 36 leads generados<br>
-                                Visualizaciones: 33.506 | Alcance: 21.344
+                                Inversión: $134.000 | 36 leads ($3.722/lead)<br>
+                                Visualizaciones: 33.506 | Alcance: 21.344<br>
+                                Visitas web: 1.308 | Conversión: 2.75%
                             </div>
                         </div>
-                        <div class="report-date">📅 Campaña Reciente</div>
+                        <div class="report-date">📅 Campaña Reciente 2025</div>
                     </a>
-                    
-                    <!-- Aquí se agregarán más informes de redes sociales -->
                 </div>
             </div>
         </div>
         
         <div class="footer">
-            <p><strong>Fitness People</strong> - Sistema de Informes</p>
+            <p><strong>Fitness People</strong> - Sistema de Informes 2025</p>
             <p>Datos confidenciales - Uso interno</p>
+            <p style="margin-top: 10px; font-size: 12px;">📁 Datos históricos almacenados en: <code>2025/datos-ventas-web.json</code> y <code>2025/datos-campanas-skap.json</code></p>
         </div>
     </div>
 </body>
