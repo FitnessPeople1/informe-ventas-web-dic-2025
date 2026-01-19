@@ -1,0 +1,69 @@
+{
+  "año": 2025,
+  "informes": [
+    {
+      "periodo": "noviembre-2025",
+      "fechaInicio": "2025-11-01",
+      "fechaFin": "2025-11-30",
+      "recaudoTotal": 13500000,
+      "ventasNuevas": 1200000,
+      "recurrencias": 12300000,
+      "registrosTotales": 180,
+      "registrosNuevos": 45,
+      "registrosRecurrentes": 135,
+      "archivoInforme": "noviembre-2025/index.html"
+    },
+    {
+      "periodo": "diciembre-2025",
+      "fechaInicio": "2025-12-01",
+      "fechaFin": "2025-12-31",
+      "recaudoTotal": 14200000,
+      "ventasNuevas": 1350000,
+      "recurrencias": 12850000,
+      "registrosTotales": 190,
+      "registrosNuevos": 48,
+      "registrosRecurrentes": 142,
+      "archivoInforme": "diciembre-2025/index.html"
+    },
+    {
+      "periodo": "enero-1-13-2025",
+      "fechaInicio": "2025-01-01",
+      "fechaFin": "2025-01-13",
+      "recaudoTotal": 12750200,
+      "ventasNuevas": 1052600,
+      "recurrencias": 11697600,
+      "registrosTotales": 165,
+      "registrosNuevos": 38,
+      "registrosRecurrentes": 127,
+      "archivoInforme": "informe-enero-1-13-2025.html",
+      "productos": [
+        {
+          "nombre": "Producto Premium",
+          "precioUnitario": 89000,
+          "unidades": 4,
+          "total": 356000
+        },
+        {
+          "nombre": "Producto Estándar",
+          "precioUnitario": 49900,
+          "unidades": 9,
+          "total": 449100
+        },
+        {
+          "nombre": "Producto Básico",
+          "precioUnitario": 9900,
+          "unidades": 25,
+          "total": 247500
+        }
+      ]
+    }
+  ],
+  "metricas": {
+    "totalRecaudado2025": 40450200,
+    "totalVentasNuevas": 3602600,
+    "totalRecurrencias": 36847600,
+    "promedioRecaudoMensual": 13483400,
+    "tasaCrecimientoNovDic": 5.19,
+    "tasaCrecimientoVentasNuevas": 12.5
+  }
+}
