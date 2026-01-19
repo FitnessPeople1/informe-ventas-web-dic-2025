@@ -1,0 +1,42 @@
+{
+  "año": 2025,
+  "campañas": [
+    {
+      "periodo": "campaña-reciente",
+      "plataformas": ["Instagram", "Facebook"],
+      "inversion": 134000,
+      "visualizaciones": 33506,
+      "alcance": 21344,
+      "reproduccionesIniciales": 30139,
+      "reproducciones3s": 11500,
+      "visitasSitioWeb": 1308,
+      "clicsEnlace": 1081,
+      "leadsGenerados": 36,
+      "mensajesDirectos": 29,
+      "formulariosCompletados": 7,
+      "interacciones": {
+        "meGusta": 57,
+        "compartidos": 16,
+        "guardados": 7,
+        "comentarios": 2
+      },
+      "actividadPerfil": {
+        "visitasPerfil": 563,
+        "nuevosSeguidores": 42
+      },
+      "metricas": {
+        "costoPorVisita": 103,
+        "costoPorLead": 3722,
+        "tasaConversionVisitaLead": 2.75,
+        "tasaConversionVisualizacionVisita": 3.9
+      },
+      "archivoInforme": "informe-campanas-skap.html"
+    }
+  ],
+  "metricas": {
+    "inversionTotal2025": 134000,
+    "leadsTotal2025": 36,
+    "costoPorLeadPromedio": 3722,
+    "alcanceTotal2025": 21344
+  }
+}
