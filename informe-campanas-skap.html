@@ -201,6 +201,10 @@
             background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
         }
         
+        .stat-box.purple {
+            background: linear-gradient(135deg, #833AB4 0%, #5B42F3 100%);
+        }
+        
         .chart-container {
             background: #f8f9ff;
             padding: 30px;
@@ -245,6 +249,45 @@
             font-size: 24px;
             font-weight: bold;
             color: #1e3c72;
+        }
+        
+        .conversion-banner {
+            background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .conversion-banner h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .conversion-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .conversion-item {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .conversion-item .number {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .conversion-item .text {
+            font-size: 14px;
+            opacity: 0.9;
         }
         
         .highlight-box {
@@ -319,6 +362,24 @@
                 <div class="amount">$134.000</div>
             </div>
             
+            <div class="conversion-banner">
+                <h3>🎯 CONVERSIONES CLAVE</h3>
+                <div class="conversion-stats">
+                    <div class="conversion-item">
+                        <div class="number">29</div>
+                        <div class="text">Personas enviaron mensaje para pedir información</div>
+                    </div>
+                    <div class="conversion-item">
+                        <div class="number">7</div>
+                        <div class="text">Personas llenaron el formulario</div>
+                    </div>
+                    <div class="conversion-item">
+                        <div class="number">36</div>
+                        <div class="text">Total de leads generados</div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="section">
                 <h2 class="section-title">🎯 Objetivo Principal</h2>
                 <div class="stats-row">
@@ -333,6 +394,10 @@
                     <div class="stat-box blue">
                         <h3>Clics en el Enlace</h3>
                         <div class="value">1.081</div>
+                    </div>
+                    <div class="stat-box purple">
+                        <h3>Costo por Lead</h3>
+                        <div class="value">$3.722</div>
                     </div>
                 </div>
             </div>
@@ -404,29 +469,32 @@
             </div>
             
             <div class="section">
-                <h2 class="section-title">📊 Distribución de Resultados</h2>
+                <h2 class="section-title">📊 Embudo de Conversión</h2>
                 <div class="chart-container">
-                    <img src="https://quickchart.io/chart?bkg=white&c={type:'bar',data:{labels:['Visualizaciones','Alcance','Reproducciones 3s','Visitas Web','Clics Enlace'],datasets:[{label:'Cantidad',data:[33506,21344,11500,1308,1081],backgroundColor:['rgb(225,48,108)','rgb(193,53,132)','rgb(131,58,180)','rgb(79,172,254)','rgb(56,239,125)']}]},options:{plugins:{legend:{display:false},title:{display:true,text:'Métricas Principales de la Campaña',font:{size:20}}},scales:{y:{beginAtZero:true}}}}" alt="Gráfico de Métricas">
+                    <img src="https://quickchart.io/chart?bkg=white&c={type:'funnel',data:{labels:['Visualizaciones: 33,506','Alcance: 21,344','Reproducciones 3s: 11,500','Visitas Web: 1,308','Mensajes: 29','Formularios: 7'],datasets:[{data:[33506,21344,11500,1308,29,7],backgroundColor:['rgb(225,48,108)','rgb(193,53,132)','rgb(131,58,180)','rgb(79,172,254)','rgb(238,9,121)','rgb(56,239,125)']}]},options:{plugins:{legend:{display:false},title:{display:true,text:'Embudo de Conversión Completo',font:{size:20}}}}}" alt="Embudo de Conversión">
                 </div>
             </div>
             
             <div class="section">
-                <h2 class="section-title">🎯 Embudo de Conversión</h2>
+                <h2 class="section-title">📈 Distribución de Leads</h2>
                 <div class="chart-container">
-                    <img src="https://quickchart.io/chart?bkg=white&c={type:'funnel',data:{labels:['Visualizaciones','Alcance','Reproducciones 3s','Visitas Web','Clics Enlace'],datasets:[{data:[33506,21344,11500,1308,1081],backgroundColor:['rgb(225,48,108)','rgb(193,53,132)','rgb(131,58,180)','rgb(79,172,254)','rgb(56,239,125)']}]},options:{plugins:{legend:{display:false},title:{display:true,text:'Embudo de Conversión',font:{size:20}}}}}" alt="Embudo de Conversión">
+                    <img src="https://quickchart.io/chart?bkg=white&c={type:'doughnut',data:{labels:['Mensajes Directos (29)','Formularios (7)'],datasets:[{data:[29,7],backgroundColor:['rgb(238,9,121)','rgb(56,239,125)']}]},options:{plugins:{legend:{position:'bottom',labels:{font:{size:16},padding:20}},title:{display:true,text:'Distribución de Leads Generados',font:{size:20}}}}}" alt="Distribución de Leads">
                 </div>
             </div>
             
             <div class="section">
-                <h2 class="section-title">💡 Engagement vs Alcance</h2>
+                <h2 class="section-title">📊 Métricas Principales</h2>
                 <div class="chart-container">
-                    <img src="https://quickchart.io/chart?bkg=white&c={type:'doughnut',data:{labels:['Alcance','Interacciones (Me gusta, compartir, guardar, comentarios)'],datasets:[{data:[21344,82],backgroundColor:['rgb(79,172,254)','rgb(238,9,121)']}]},options:{plugins:{legend:{position:'bottom',labels:{font:{size:14},padding:15}},title:{display:true,text:'Alcance vs Interacciones',font:{size:20}}}}}" alt="Alcance vs Engagement">
+                    <img src="https://quickchart.io/chart?bkg=white&c={type:'bar',data:{labels:['Visualizaciones','Alcance','Reproducciones 3s','Visitas Web','Clics Enlace','Leads'],datasets:[{label:'Cantidad',data:[33506,21344,11500,1308,1081,36],backgroundColor:['rgb(225,48,108)','rgb(193,53,132)','rgb(131,58,180)','rgb(79,172,254)','rgb(56,239,125)','rgb(238,9,121)']}]},options:{plugins:{legend:{display:false},title:{display:true,text:'Resumen de Métricas de la Campaña',font:{size:20}}},scales:{y:{beginAtZero:true}}}}" alt="Gráfico de Métricas">
                 </div>
             </div>
             
             <div class="highlight-box">
                 <h4>✨ Conclusiones Clave:</h4>
                 <ul>
+                    <li>36 leads generados (29 mensajes + 7 formularios) con inversión de $134.000</li>
+                    <li>Costo por lead: $3.722 - Excelente retorno de inversión</li>
+                    <li>Tasa de conversión de visita a lead: 2.75% (36 leads de 1.308 visitas)</li>
                     <li>Excelente alcance orgánico con 21.344 personas únicas alcanzadas</li>
                     <li>Alto nivel de visualizaciones: 33.506 impresiones totales</li>
                     <li>Tasa de conversión a visitas web: 3.9% (1.308 visitas de 33.506 visualizaciones)</li>
