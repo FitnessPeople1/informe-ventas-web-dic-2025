@@ -269,6 +269,51 @@
             color: #666;
         }
         
+        .demo-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .demo-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .demo-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .demo-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .demo-table tr:hover {
+            background: #f8f9ff;
+        }
+        
+        .percentage-bar {
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        
+        .percentage-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #E1306C 0%, #C13584 100%);
+            border-radius: 4px;
+        }
+        
         .highlight-box {
             background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
             padding: 25px;
@@ -381,6 +426,35 @@
             </div>
             
             <div class="section">
+                <h2 class="section-title">👥 Crecimiento de Seguidores</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card primary">
+                        <div class="metric-label">Total de Seguidores</div>
+                        <div class="metric-value">2.315</div>
+                        <div class="growth-badge">+29.5%</div>
+                    </div>
+                    <div class="metric-card success">
+                        <div class="metric-label">Nuevos Seguidores</div>
+                        <div class="metric-value">527</div>
+                        <div class="metric-subtitle">Crecimiento neto</div>
+                    </div>
+                    <div class="metric-card info">
+                        <div class="metric-label">Empezaron a Seguirte</div>
+                        <div class="metric-value">583</div>
+                        <div class="metric-subtitle">Nuevos follows</div>
+                    </div>
+                    <div class="metric-card warning">
+                        <div class="metric-label">Dejaron de Seguirte</div>
+                        <div class="metric-value">56</div>
+                        <div class="metric-subtitle">Unfollows</div>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <img src="https://quickchart.io/chart?bkg=white&c={type:'bar',data:{labels:['Empezaron a seguir','Dejaron de seguir','Crecimiento neto'],datasets:[{label:'Seguidores',data:[583,56,527],backgroundColor:['rgb(56,239,125)','rgb(238,9,121)','rgb(79,172,254)']}]},options:{plugins:{legend:{display:false},title:{display:true,text:'Análisis de Seguidores - Enero 2025',font:{size:20}}},scales:{y:{beginAtZero:true}}}}" alt="Análisis de Seguidores">
+                </div>
+            </div>
+            
+            <div class="section">
                 <h2 class="section-title">🎬 Contenido Principal</h2>
                 <div class="content-grid">
                     <div class="content-item">
@@ -408,14 +482,140 @@
             <div class="section">
                 <h2 class="section-title">💬 Distribución de Conversaciones</h2>
                 <div class="chart-container">
-                    <img src="https://quickchart.io/chart?bkg=white&c={type:'doughnut',data:{labels:['Nuevas (212)','Recurrentes (139)'],datasets:[{data:[212,139],backgroundColor:['rgb(238,9,121)','rgb(56,239,125)']}]},options:{plugins:{legend:{position:'bottom',labels:{font:{size:16},padding:20}},title:{display:true,text:'Total: 351 Conversaciones',font:{size:20}}}}}" alt="Distribución de Conversaciones">
+                    <img src="https://quickchart.io/chart?bkg=white&c={type:'doughnut',data:{labels:['Nuevas 60.4% (212)','Recurrentes 39.6% (139)'],datasets:[{data:[212,139],backgroundColor:['rgb(238,9,121)','rgb(56,239,125)']}]},options:{plugins:{legend:{position:'bottom',labels:{font:{size:16},padding:20}},title:{display:true,text:'Total: 351 Conversaciones',font:{size:20}}}}}" alt="Distribución de Conversaciones">
                 </div>
             </div>
             
             <div class="section">
-                <h2 class="section-title">📈 Evolución de Conversaciones</h2>
+                <h2 class="section-title">📍 Datos Demográficos - Ubicación</h2>
+                <table class="demo-table">
+                    <thead>
+                        <tr>
+                            <th>Ciudad</th>
+                            <th>Porcentaje</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Bucaramanga</strong></td>
+                            <td>
+                                47.0%
+                                <div class="percentage-bar">
+                                    <div class="percentage-fill" style="width: 47%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Floridablanca</strong></td>
+                            <td>
+                                10.8%
+                                <div class="percentage-bar">
+                                    <div class="percentage-fill" style="width: 10.8%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bogotá</strong></td>
+                            <td>
+                                8.5%
+                                <div class="percentage-bar">
+                                    <div class="percentage-fill" style="width: 8.5%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Medellín</strong></td>
+                            <td>
+                                3.2%
+                                <div class="percentage-bar">
+                                    <div class="percentage-fill" style="width: 3.2%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cali</strong></td>
+                            <td>
+                                2.7%
+                                <div class="percentage-bar">
+                                    <div class="percentage-fill" style="width: 2.7%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
                 <div class="chart-container">
-                    <img src="https://quickchart.io/chart?bkg=white&c={type:'line',data:{labels:['5 Ene','12 Ene','19 Ene','26 Ene','2 Feb'],datasets:[{label:'Conversaciones Totales',data:[10,93,88,120,30],borderColor:'rgb(225,48,108)',backgroundColor:'rgba(225,48,108,0.1)',fill:true,tension:0.4}]},options:{plugins:{legend:{display:true},title:{display:true,text:'Tendencia de Conversaciones por Semana',font:{size:20}}},scales:{y:{beginAtZero:true}}}}" alt="Evolución de Conversaciones">
+                    <img src="https://quickchart.io/chart?bkg=white&c={type:'pie',data:{labels:['Bucaramanga 47%','Floridablanca 10.8%','Bogotá 8.5%','Medellín 3.2%','Cali 2.7%','Otras 27.8%'],datasets:[{data:[47,10.8,8.5,3.2,2.7,27.8],backgroundColor:['rgb(225,48,108)','rgb(193,53,132)','rgb(131,58,180)','rgb(79,172,254)','rgb(56,239,125)','rgb(253,203,110)']}]},options:{plugins:{legend:{position:'right',labels:{font:{size:14},padding:15}},title:{display:true,text:'Distribución Geográfica de Seguidores',font:{size:20}}}}}" alt="Distribución Geográfica">
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">👤 Datos Demográficos - Edad</h2>
+                <table class="demo-table">
+                    <thead>
+                        <tr>
+                            <th>Rango de Edad</th>
+                            <th>Porcentaje</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>25-34 años</strong></td>
+                            <td>
+                                33.4%
+                                <div class="percentage-bar">
+                                    <div class="percentage-fill" style="width: 33.4%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>35-44 años</strong></td>
+                            <td>
+                                33.4%
+                                <div class="percentage-bar">
+                                    <div class="percentage-fill" style="width: 33.4%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>45-54 años</strong></td>
+                            <td>
+                                18.5%
+                                <div class="percentage-bar">
+                                    <div class="percentage-fill" style="width: 18.5%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>18-24 años</strong></td>
+                            <td>
+                                6.1%
+                                <div class="percentage-bar">
+                                    <div class="percentage-fill" style="width: 6.1%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>55-64 años</strong></td>
+                            <td>
+                                5.9%
+                                <div class="percentage-bar">
+                                    <div class="percentage-fill" style="width: 5.9%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>13-17 años</strong></td>
+                            <td>
+                                0.1%
+                                <div class="percentage-bar">
+                                    <div class="percentage-fill" style="width: 0.1%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="chart-container">
+                    <img src="https://quickchart.io/chart?bkg=white&c={type:'bar',data:{labels:['25-34','35-44','45-54','18-24','55-64','13-17'],datasets:[{label:'Porcentaje',data:[33.4,33.4,18.5,6.1,5.9,0.1],backgroundColor:['rgb(225,48,108)','rgb(193,53,132)','rgb(131,58,180)','rgb(79,172,254)','rgb(56,239,125)','rgb(253,203,110)']}]},options:{plugins:{legend:{display:false},title:{display:true,text:'Distribución por Edad - Público Principal: 25-44 años (66.8%)',font:{size:18}}},scales:{y:{beginAtZero:true,ticks:{callback:function(value){return value+'%'}}}}}}" alt="Distribución por Edad">
                 </div>
             </div>
             
@@ -423,48 +623,49 @@
                 <h2 class="section-title">🎯 Métricas Clave</h2>
                 <div class="metrics-grid">
                     <div class="metric-card primary">
-                        <div class="metric-label">Tasa de Conversión</div>
-                        <div class="metric-value">60.4%</div>
-                        <div class="metric-subtitle">Nuevas conversaciones</div>
-                    </div>
-                    <div class="metric-card success">
-                        <div class="metric-label">Tasa Recurrencia</div>
-                        <div class="metric-value">39.6%</div>
-                        <div class="metric-subtitle">Conversaciones recurrentes</div>
-                    </div>
-                    <div class="metric-card info">
-                        <div class="metric-label">Visualizaciones Totales</div>
-                        <div class="metric-value">255 mil</div>
-                        <div class="metric-subtitle">Suma de contenido principal</div>
-                    </div>
-                    <div class="metric-card warning">
-                        <div class="metric-label">Tasa Formulario</div>
+                        <div class="metric-label">Tasa Conversión Formulario</div>
                         <div class="metric-value">29.1%</div>
                         <div class="metric-subtitle">102 de 351 conversaciones</div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title">📊 Resumen de Métricas</h2>
-                <div class="chart-container">
-                    <img src="https://quickchart.io/chart?bkg=white&c={type:'bar',data:{labels:['Formularios','Conversaciones Nuevas','Conversaciones Recurrentes','Visitas Perfil','Toques Enlace'],datasets:[{label:'Cantidad',data:[102,212,139,8727,1320],backgroundColor:['rgb(56,239,125)','rgb(238,9,121)','rgb(255,106,0)','rgb(79,172,254)','rgb(131,58,180)']}]},options:{plugins:{legend:{display:false},title:{display:true,text:'Resumen de Actividad - Enero 2025',font:{size:20}}},scales:{y:{beginAtZero:true,type:'logarithmic'}}}}" alt="Resumen de Métricas">
+                    <div class="metric-card success">
+                        <div class="metric-label">Tasa Conversaciones Nuevas</div>
+                        <div class="metric-value">60.4%</div>
+                        <div class="metric-subtitle">212 conversaciones nuevas</div>
+                    </div>
+                    <div class="metric-card info">
+                        <div class="metric-label">Tasa Recurrencia</div>
+                        <div class="metric-value">39.6%</div>
+                        <div class="metric-subtitle">139 conversaciones recurrentes</div>
+                    </div>
+                    <div class="metric-card warning">
+                        <div class="metric-label">Visualizaciones Totales</div>
+                        <div class="metric-value">255 mil</div>
+                        <div class="metric-subtitle">Suma contenido principal</div>
+                    </div>
+                    <div class="metric-card primary">
+                        <div class="metric-label">Tasa Retención Seguidores</div>
+                        <div class="metric-value">90.4%</div>
+                        <div class="metric-subtitle">56 unfollows de 583 nuevos</div>
+                    </div>
                 </div>
             </div>
             
             <div class="highlight-box">
                 <h4>✨ Conclusiones Clave:</h4>
                 <ul>
-                    <li>102 inscripciones en formulario Fitmewise - excelente tasa de conversión del 29.1%</li>
-                    <li>351 conversaciones totales generadas (212 nuevas + 139 recurrentes)</li>
+                    <li>102 inscripciones en formulario Fitmewise generadas</li>
+                    <li>351 conversaciones totales (212 nuevas + 139 recurrentes)</li>
                     <li>Crecimiento excepcional: +125.4% en actividad del perfil vs periodo anterior</li>
+                    <li>527 nuevos seguidores netos (+29.5% crecimiento)</li>
                     <li>8.727 visitas al perfil con incremento del +113.3%</li>
                     <li>1.320 toques en enlace externo - crecimiento del +224.3%</li>
                     <li>255 mil visualizaciones totales en contenido principal</li>
                     <li>Contenido del 22 de enero fue el más exitoso con 91 mil visualizaciones</li>
                     <li>60.4% de conversaciones son nuevas, mostrando excelente captación</li>
                     <li>91 toques en dirección del negocio - interés en ubicación física</li>
-                    <li>Pico de conversaciones en semana del 26 de enero con 120 conversaciones</li>
+                    <li>Público objetivo bien definido: 66.8% entre 25-44 años</li>
+                    <li>Fuerte presencia local: 47% de seguidores en Bucaramanga</li>
+                    <li>Alta tasa de retención: 90.4% de nuevos seguidores se mantienen</li>
                 </ul>
             </div>
         </div>
