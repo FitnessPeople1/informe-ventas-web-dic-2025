@@ -2,6 +2,50 @@
   "año": 2025,
   "campañas": [
     {
+      "periodo": "enero-2025",
+      "fechaInicio": "2025-01-01",
+      "fechaFin": "2025-02-02",
+      "plataformas": ["Instagram", "Facebook"],
+      "formulariosFitmewise": 102,
+      "conversacionesNuevas": 212,
+      "conversacionesRecurrentes": 139,
+      "conversacionesTotales": 351,
+      "actividadPerfil": {
+        "actividadTotal": 10138,
+        "crecimiento": 125.4,
+        "visitasPerfil": 8727,
+        "crecimientoVisitas": 113.3,
+        "toquesEnlaceExterno": 1320,
+        "crecimientoEnlace": 224.3,
+        "toquesDireccionNegocio": 91
+      },
+      "contenidoPrincipal": [
+        {
+          "fecha": "2025-01-22",
+          "visualizaciones": 91000
+        },
+        {
+          "fecha": "2025-01-10",
+          "visualizaciones": 77000
+        },
+        {
+          "fecha": "2025-01-14",
+          "visualizaciones": 61000
+        },
+        {
+          "fecha": "2025-01-26",
+          "visualizaciones": 26000
+        }
+      ],
+      "metricas": {
+        "tasaConversionFormulario": 29.1,
+        "tasaConversacionesNuevas": 60.4,
+        "tasaConversacionesRecurrentes": 39.6,
+        "visualizacionesTotales": 255000
+      },
+      "archivoInforme": "informe-skap-redes-enero-2025.html"
+    },
+    {
       "periodo": "campaña-reciente",
       "plataformas": ["Instagram", "Facebook"],
       "inversion": 134000,
@@ -35,8 +79,12 @@
   ],
   "metricas": {
     "inversionTotal2025": 134000,
-    "leadsTotal2025": 36,
+    "leadsTotal2025": 138,
+    "formulariosFitmewise": 102,
+    "conversacionesTotales": 351,
     "costoPorLeadPromedio": 3722,
-    "alcanceTotal2025": 21344
+    "alcanceTotal2025": 21344,
+    "visitasPerfilTotal": 9290,
+    "visualizacionesTotales": 288506
   }
 }
